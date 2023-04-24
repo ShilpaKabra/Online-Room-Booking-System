@@ -1,0 +1,37 @@
+Functional Operations :-
+1.Home Page
+	a.Search Button
+	b.Check-in
+	c.Check-out
+
+2.Registration Page
+	a.User Name
+	b.User age
+	c.User Mobile No
+	d.User Email
+	e.User Id
+	f.Set Password
+	
+3.Login Page
+	a.Login id
+	b.User Password
+	c.Login Button
+	d.Change Password	
+	
+4.Hotel Discription Page
+	a.select Hotel Type dropdown
+	
+5.Room Discription Page
+	a.Select Room Type dropdown
+	b.Room Confirmation Button
+
+6.Booking Page
+	a.Payment Option
+	b.Confirmation Button 	
+
+7.Payment Page
+	a.Take User Bank Information
+	b.Confirm Booking
+
+8.Confirmation Page 
+	a.Show all details of Customer

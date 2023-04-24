@@ -1,0 +1,80 @@
+1. ORBS User Registration Table
+
+Create table User_Registration(
+Uid int primary key ,
+Uname varchar(20) not null,
+Umno int(50) not null,
+Uemail varchar(50) not null,
+Upasswd varchar(30) not null,
+Uadd varchar(100)
+);
+
+2. ORBS User Login
+
+Create table User_Login(
+Lname varchar(20),
+Lpasswd int,
+Lid int, constraint fk_Lid foreign key(Lid) references User_Registration(Uid)
+on delete set null
+on update cascade
+);
+
+3. ORBS Search
+
+Create table Search(
+Ch_in date,
+Ch_out date,
+City varchar(20)
+);
+
+4. ORBS Hotel
+
+Create table Hotel(
+Hid int primary key ,
+Hname varchar(20) not null,
+Hdesc varchar(100),
+Htype varchar(50) not null,
+Hcity int, constraint fk_hcity foreign key(hcity) references search(city)
+on delete set null
+on update cascade
+);
+
+5. ORBS Room
+
+Create table Room(
+Rid int primary key,
+Rdesc varchar(100) not null,
+Rrent double(9,2) not null,
+Hid int, constraint fk_Hid foreign key(Hid) references hotel(Hid)
+on delete set null
+on update cascade
+);
+
+5. ORBS Customer
+Create table Customer(
+Cid int primary key,
+Cname varchar(20) not null,
+Cmno int not null,
+Cemail varchar(20)
+);
+
+
+6. ORBS Payment
+
+create table Payment(
+Pid int primary key auto_increment,
+Pamt double(9,2),
+Pdate date,
+Pcid int, constraint fk_pcid foreign key(pcid) references customer(cid)
+on delete set null
+on update cascade
+);
+
+7. ORBS Booking Details
+Create table Booking(
+bid int primary key,
+btype varchar(20) not null,
+btype varchar(20) not null,
+Cmno int not null,
+Cemail varchar(20)
+);
